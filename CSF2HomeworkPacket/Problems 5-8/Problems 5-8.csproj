@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A374E86-63C0-4C19-BD1A-EAEBD1B2325D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>CSF2HomeworkPacket</RootNamespace>
-    <AssemblyName>CSF2HomeworkPacket</AssemblyName>
+    <ProjectGuid>{1E3FAB92-5318-444A-92E5-B39B6A1C6D6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Problems_5_8</RootNamespace>
+    <AssemblyName>Problems 5-8</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,20 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatatypeHarness.cs" />
+    <Compile Include="CreditCardAccount.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Problems 1-4\Problems 1-4.csproj">
+    <ProjectReference Include="..\Problems 1-4\Problems 1-4.csproj">
       <Project>{822685cf-c2d3-41ce-806d-a836406b1225}</Project>
       <Name>Problems 1-4</Name>
-    </ProjectReference>
-    <ProjectReference Include="Problems 5-8\Problems 5-8.csproj">
-      <Project>{1e3fab92-5318-444a-92e5-b39b6a1c6d6f}</Project>
-      <Name>Problems 5-8</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
