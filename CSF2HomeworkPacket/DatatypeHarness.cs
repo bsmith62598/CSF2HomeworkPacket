@@ -12,17 +12,27 @@ namespace CSF2HomeworkPacket
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\nStudents\n");
+
             Student brandon = new Student("Brandon", "Smith", "123456", 3.6f);
             Console.WriteLine(brandon);
+
+            Console.WriteLine("\n\nVehicle\n\n");
 
             Vehicle skyline = new Vehicle("Nissan", "Skyline", 1994, 3600);
             Console.WriteLine(skyline);
 
+            Console.WriteLine("\nLogin\n");
+
             Login me = new Login("Bsmith", "066598");
             Console.WriteLine(me);
 
+            Console.WriteLine("\nContact Info\n");
+
             ContactInfo mySelf = new ContactInfo("123 W. Road", "Kansas City", "Kansas", "66065", "913-555-8965", "email@email.com");
             Console.WriteLine(mySelf);
+
+            Console.WriteLine("\nCustomers\n");
 
             Customer c1 = new Customer();
             c1.FirstName = "Matt";
@@ -37,6 +47,8 @@ namespace CSF2HomeworkPacket
 
             Customer c2 = new Customer("Marvin", "Waltz", "777895", mySelf);
             Console.WriteLine(c2);
+
+            Console.WriteLine("\nCredit Card Account\n");
 
             CreditCardAccount card1 = new CreditCardAccount();
             card1.AccountNumber = 123456789;
@@ -53,6 +65,25 @@ namespace CSF2HomeworkPacket
 
             CreditCardAccount card2 = new CreditCardAccount(1122334455, 4.5m, 300, c2, true);
             Console.WriteLine(card2);
+
+            Console.WriteLine("\nBooks\n");
+
+            Books bk1 = new Books();
+            bk1.Author = "Guy Man";
+            bk1.Title = "Guy's Adventure";
+            bk1.NbrOfPages = 25;
+
+            Console.WriteLine("\nTitle: {0}" +
+                "\nAuthor: {1}" +
+                "\nNumber of Pages: {2}", bk1.Title, bk1.Author, bk1.NbrOfPages);
+
+            Books bk2 = new Books("WTF", "Brian", 156);
+            Console.WriteLine(bk2);
+
+            Console.WriteLine("\nLibrary\n");
+            List<Books> books = new List<Books>() { bk1, bk2 };
+            Library l1 = new Library("Crazy Cool Library", "123 Qwerk Road", books, "Olathe", "KS", "66969");
+            Console.WriteLine(l1);
         }
     }
 }
